@@ -25,7 +25,7 @@ Rust is used at the binary-input boundary because ownership, borrowing, and boun
 
 ## Build
 
-Requirements: stable Rust (the Android targets in `rust-toolchain.toml`), JDK 17, Android SDK platform 36, Android NDK 30.0.16248370, and `cargo-ndk` 4.1.2.
+Requirements: stable Rust (the Android targets in `rust-toolchain.toml`), JDK 17, Android SDK platform 37, Android NDK 30.0.16248370, and `cargo-ndk` 4.1.2.
 
 Run the Rust checks:
 

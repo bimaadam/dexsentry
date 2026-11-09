@@ -22,7 +22,7 @@ jobs:
           components: clippy, rustfmt
       - uses: android-actions/setup-android@v4
       - name: Install Android SDK packages
-        run: sdkmanager "platform-tools" "platforms;android-36" "build-tools;36.0.0" "ndk;30.0.16248370"
+        run: sdkmanager "platform-tools" "platforms;android-37.0" "build-tools;36.0.0" "ndk;30.0.16248370"
       - name: Install cargo-ndk
         run: cargo install cargo-ndk --version 4.1.2 --locked
       - name: Build Rust libraries and UniFFI bindings

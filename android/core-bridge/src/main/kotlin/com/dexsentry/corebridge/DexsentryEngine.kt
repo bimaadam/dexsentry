@@ -51,6 +51,9 @@ sealed class EngineError(
 class RustDexsentryEngine : DexsentryEngine {
     override fun version(): String = ffiVersion()
 
+    // FFI boundary: UniFFI reports a Rust panic as InternalException, which extends Exception,
+    // and binding lift failures as RuntimeException. Neither may reach the UI as a raw exception.
+    @Suppress("TooGenericExceptionCaught")
     override suspend fun analyze(apkPath: String): Result<ScanReport> =
         try {
             val report =
@@ -62,7 +65,7 @@ class RustDexsentryEngine : DexsentryEngine {
             throw cancellation
         } catch (error: FfiException) {
             Result.failure(EngineError.NativeFailure(error.message ?: "Rust analysis failed"))
-        } catch (error: RuntimeException) {
+        } catch (error: Exception) {
             Result.failure(EngineError.Unexpected(error))
         }
 }

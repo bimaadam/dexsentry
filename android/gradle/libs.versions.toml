@@ -8,7 +8,7 @@ coroutines = "1.11.0"
 jna = "5.19.1"
 ktlint-gradle = "14.2.0"
 detekt = "1.23.8"
-compile-sdk = "36"
+compile-sdk = "37"
 min-sdk = "26"
 target-sdk = "36"
 
