@@ -1,0 +1,14 @@
+/target/
+/fuzz/target/
+/android/.gradle/
+/android/.kotlin/
+/android/.toolchain/
+/android/**/build/
+/android/local.properties
+/android/core-bridge/src/main/jniLibs/*/*.so
+/android/core-bridge/src/main/java/com/dexsentry/corebridge/generated/
+/android/core-bridge/src/main/kotlin/com/dexsentry/corebridge/generated/
+/android/core-bridge/src/main/uniffi/
+/android/core-bridge/build/generated/
+*.iml
+.idea/

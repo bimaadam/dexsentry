@@ -1,0 +1,16 @@
+[package]
+name = "dexsentry-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+dexsentry-rules = { path = "../dexsentry-rules" }
+thiserror.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+insta.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,21 @@
+[package]
+name = "dexsentry-ffi"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "staticlib", "lib"]
+
+[features]
+bindgen = ["uniffi/cli"]
+
+[dependencies]
+dexsentry-core = { path = "../dexsentry-core" }
+thiserror.workspace = true
+uniffi.workspace = true
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "src/bin/uniffi-bindgen.rs"
+required-features = ["bindgen"]
